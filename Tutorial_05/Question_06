@@ -1,0 +1,21 @@
+object Q6 {
+  def main(args: Array[String]): Unit = {
+    print("Enter Number :")
+    val n = scala.io.StdIn.readInt()
+    printNumbers(n)
+  }
+
+  def printNumbers(n: Int): Unit = {
+    for (i <- 0 until n) {
+      val fibonacciNumber = fibonacci(i)
+      print(fibonacciNumber + " ")
+    }
+  }
+
+  def fibonacci(n: Int): Int = {
+    if (n <= 1)
+      n
+    else
+      fibonacci(n - 1) + fibonacci(n - 2)
+  }
+}
