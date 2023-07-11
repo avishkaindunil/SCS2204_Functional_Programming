@@ -1,0 +1,15 @@
+object Q3 {
+  def main(args: Array[String]): Unit = {
+    print("Enter Number :")
+    val number = scala.io.StdIn.readInt()
+    val result = sum(number)
+    println(result)
+  }
+
+  def sum(n: Int): Int = {
+    if (n <= 0)
+      0
+    else
+      n + sum(n - 1)
+  }
+}
